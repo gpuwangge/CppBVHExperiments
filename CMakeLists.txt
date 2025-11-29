@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.20)
 SET(CMAKE_C_COMPILER "C:/mingw64/bin/gcc.exe")
 SET(CMAKE_CXX_COMPILER "C:/mingw64/bin/g++.exe")
-project(bvh_Project)
+project(bvh_project)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_BUILD_TYPE "Debug")
 
@@ -11,6 +11,7 @@ aux_source_directory(${PROJECT_SOURCE_DIR}/source SRC)
 # set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/build/bin)
 
 #Set variables so all cmakelists.txt in sub dirs can access
+#CMAKE_BINARY_DIR is the place where you run cmake command, usually a build/ folder
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib) #CMAKE_BINARY_DIR is build/, all lib goes here
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib) #this is not required in windows
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin) #this is required in Windows, all dll/exe goes here
